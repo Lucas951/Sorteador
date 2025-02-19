@@ -5,9 +5,17 @@ function sortear(){
     const inputMin = Math.ceil(document.querySelector(".input-Min").value) // ceil arrendondar para cima
     const inputMax = Math.floor(document.querySelector(".input-Max").value) // floor arredondar para baixo
 
-    const result = Math.floor(Math.random() * (inputMax - inputMin + 1)) + inputMin 
+    if(inputMin >= inputMax){
+        alert("O número mínimo é maior que o número maior")
+    }
+    else{
+        const result = Math.floor(Math.random() * (inputMax - inputMin + 1)) + inputMin 
 
-    alert(result)
+        alert(result)
+    }
+    
+
+   
 }
 
 botaoSortear.addEventListener("click", sortear)
